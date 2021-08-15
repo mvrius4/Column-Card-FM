@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap&family=Lexend+Deca&display=swap");
+:root {
+	--ff-1: "Lexend Deca", sans-serif;
+	--ff-2: "Big Shoulders Display", cursive;
+
+	--orange: hsl(31, 77%, 52%);
+	--cyan: hsl(184, 100%, 22%);
+	--dark-cyan: hsl(179, 100%, 13%);
+
+	--white: hsla(0, 0%, 100%, 0.75);
+	--grey: hsl(0, 0%, 95%);
+}
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	scroll-behavior: smooth;
+}
+body {
+	display: grid;
+	min-height: 100vh;
+	place-items: center;
+	font-family: var(--ff-1), sans-serif;
+	color: var(--white);
+	font-size: 15px;
+	line-height: 1.6;
+}
+h1 {
+	font-family: var(--ff-2);
+	font-size: 2rem;
+	text-transform: uppercase;
+	padding: 1rem 0 1rem 0;
+}
+p {
+	color: hsl(0, 0%, 95%);
+}
+main {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 900px;
+    margin: auto;
+}
+.orange {
+	background: var(--orange);
+	padding: 3rem;
+	border-radius: 10px 0 0 10px;
+}
+.cyan {
+	background: var(--cyan);
+	padding: 3rem;
+}
+.dark {
+	background: var(--dark-cyan);
+	border-radius: 0 10px 10px 0;
+}
+.button {
+	background: var(--white);
+	border: 2px solid var(--white);
+	margin-top: 5rem;
+	padding: 10px 20px;
+	border-radius: 2rem;
+}
+.button:hover {
+	background: transparent;
+	color: var(--white);
+	cursor: pointer;
+	transition: all 0.4s ease-in-out;
+}
+.button-orange {
+	color: var(--orange);
+}
+.button-cyan {
+	color: var(--cyan);
+}
+.button-dark {
+	color: var(--dark-cyan);
+}
+@media screen and (max-width: 900px) {
+	main {
+		flex-direction: column;
+		margin: 2rem;
+	}
+	.orange {
+		border-radius: 10px 10px 0 0;
+	}
+	.dark {
+		border-radius: 0 0 10px 10px;
+	}
+	.button {
+		margin-top: 2rem;
+	}
+}
+.attribution { 
+	font-size: 12px; 
+	text-align: center; 
+	color: #161616;
+}
+.attribution a {
+	color: var(--cyan);
+	font-weight: 700;
+	text-decoration: none;
+}
+.attribution a:hover {
+	color: var(--dark-cyan);
+}
